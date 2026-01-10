@@ -24,10 +24,10 @@ function Home() {
           </Link>
 
           {/* Arcade Card */}
-          <Link to="/arcades">
+          <Link to="/arcade">
             <div className="bg-gray-800 rounded-lg p-8 hover:bg-gray-700 transition cursor-pointer h-full">
               <div className="text-6xl mb-4 text-center">🕹️</div>
-              <h2 className="text-2xl font-bold text-center mb-2">Arcades</h2>
+              <h2 className="text-2xl font-bold text-center mb-2">Arcade</h2>
               <p className="text-gray-400 text-center">
                 Flappy Bird, Tetris, Pong & more
               </p>
