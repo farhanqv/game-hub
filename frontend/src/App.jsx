@@ -3,6 +3,8 @@ import Home from './pages/Home'
 import Puzzles from './pages/Puzzles'
 import Arcade from './pages/Arcade'
 import BoardGames from './pages/BoardGames'
+import TestRoom from './pages/TestRoom'
+import Checkers from './pages/Checkers'
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Route path="/puzzles" element={<Puzzles />} />
         <Route path="/arcade" element={<Arcade />} />
         <Route path="/board-games" element={<BoardGames />} />
+        <Route path="/test-room" element={<TestRoom />} />
+        <Route path="/checkers" element={<Checkers />} />
       </Routes>
     </Router>
   )

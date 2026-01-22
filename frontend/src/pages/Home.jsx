@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import ScribbleCat from '../components/ScribbleCat/ScribbleCat';
+
 
 function Home() {
   return (
@@ -46,6 +48,7 @@ function Home() {
           </Link>
         </div>
       </div>
+      <ScribbleCat />
     </div>
   )
 }

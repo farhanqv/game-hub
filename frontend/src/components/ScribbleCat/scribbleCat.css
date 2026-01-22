@@ -1,0 +1,122 @@
+/* Scribble Canvas */
+.scribble-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: auto;
+  z-index: 9998;
+  cursor: crosshair;
+}
+
+.scribble-canvas.drawing {
+  pointer-events: auto;
+}
+
+/* Cat Container */
+.cat-container {
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Cat Head */
+.cat-head {
+  position: relative;
+  width: 120px;
+  height: 80px;
+  transform: translateY(10px); /* Half hidden below screen */
+}
+
+.cat-head img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Speech Bubble */
+.speech-bubble {
+  position: absolute;
+  bottom: 100%;
+  left: -10px;
+  margin-bottom: 10px;
+  background: white;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  border: 8px solid transparent;
+  border-top-color: white;
+}
+
+/* Cat Arm */
+.cat-arm {
+  position: absolute;
+  bottom: -30px; /* Hidden below screen by default */
+  left: 50px;
+  width: 100px;
+  height: 30px;
+  transform-origin: left center;
+  transition: transform 0.1s linear;
+  opacity: 0;
+}
+
+.cat-arm.active {
+  opacity: 1;
+}
+
+.cat-arm img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop only */
+@media (hover: none) and (pointer: coarse) {
+  .scribble-canvas {
+    display: none;
+  }
+  .cat-container {
+    display: none;
+  }
+}
+
+/* Prevent text selection when drawing */
+body.scribbling {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+body.scribbling * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
