@@ -29,10 +29,10 @@ function TestRoom() {
 
   // Connect to Socket.IO
   useEffect(() => {
-    const newSocket = io('http://localhost:3000');
+    const newSocket = io(import.meta.env.BACKEND_URL);
     setSocket(newSocket);
 
-    return () => newSocket.close();
+      return () => newSocket.close();
   }, []);
 
   // Socket event listeners
