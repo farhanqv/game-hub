@@ -34,7 +34,7 @@ function TestRoom() {
     const BACKEND_URL = 'https://game-hub-production-7736.up.railway.app';
     
     console.log('🔌 Connecting to backend:', BACKEND_URL);
-    console.log('📦 Env variable:', import.meta.env.VITE_BACKEND_URL);
+    console.log('📦 Env variable:', import.meta.env.BACKEND_URL);
     
     const newSocket = io(BACKEND_URL);
     setSocket(newSocket);
