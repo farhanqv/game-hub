@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Games from './pages/Games'
@@ -8,6 +9,10 @@ import TestRoom from './pages/TestRoom'
 import Checkers from './pages/Checkers'
 
 function App() {
+  useEffect(() => {
+    document.title = 'Muhammad Farhan';
+  }, []);
+
   return (
     <Router>
       <Routes>
