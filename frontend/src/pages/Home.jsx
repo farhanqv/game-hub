@@ -164,7 +164,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center py-8 text-gray-600 border-t border-gray-200 mt-12 relative z-10">
-        <p>© 2025 Farhan. All rights reserved.</p>
+        <p>© 2025 Farhan</p>
       </footer>
       <ScribbleCat />
     </div>
