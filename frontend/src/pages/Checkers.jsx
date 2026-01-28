@@ -25,7 +25,7 @@ function Checkers() {
 
   // Connect to Socket.IO
   useEffect(() => {
-    const newSocket = io(import.meta.env.BACKEND_URL);
+    const newSocket = io(import.meta.env.VITE_BACKEND_URL);
     setSocket(newSocket);
 
     return () => newSocket.close();
