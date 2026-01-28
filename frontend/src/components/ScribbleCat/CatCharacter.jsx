@@ -85,7 +85,7 @@ function CatCharacter({ currentPawPosition, isErasing, armState }) {
         whiteSpace: 'nowrap',
         boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
       }}>
-        Don't scribble on the screen!
+        DO NOT SCRIBBLE!
         {/* Speech bubble pointer */}
         <div style={{
           position: 'absolute',

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Games from './pages/Games'
 import Puzzles from './pages/Puzzles'
 import Arcade from './pages/Arcade'
 import BoardGames from './pages/BoardGames'
@@ -11,6 +12,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/games" element={<Games />} />
         <Route path="/puzzles" element={<Puzzles />} />
         <Route path="/arcade" element={<Arcade />} />
         <Route path="/board-games" element={<BoardGames />} />
