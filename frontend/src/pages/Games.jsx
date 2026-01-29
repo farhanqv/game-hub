@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-import ScribbleCat from '../components/ScribbleCat/ScribbleCat';
-
 
 function Games() {
   return (
@@ -10,7 +8,6 @@ function Games() {
           🎮 Games
         </h1>
         <p className="text-xl text-center text-gray-400 mb-16">
-          Your Personal Gaming Website
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -55,7 +52,6 @@ function Games() {
           </Link>
         </div>
       </div>
-      <ScribbleCat />
     </div>
   )
 }

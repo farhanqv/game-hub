@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import projects from '../data/projects';
+import ProjectCard from '../components/ProjectCard';
+import ProjectModal from '../components/ProjectModal';
+import skills from '../data/skills';
 import ScribbleCat from '../components/ScribbleCat/ScribbleCat';
 
 
 export default function Home() {
+  const [activeProject, setActiveProject] = useState(null);
+
   return (
     <div className="bg-gray-50 min-h-screen overflow-x-hidden w-full relative">
       {/* Grid Pattern Background */}
@@ -21,15 +27,15 @@ export default function Home() {
       {/* Navbar - Dark and Sticky */}
       <nav className="bg-gray-800 shadow-lg fixed top-0 left-0 right-0 z-50">
         <div className="flex justify-end gap-8 py-4 pr-8">
-          <Link to="/one" className="text-gray-200 font-medium hover:text-white transition-colors">
-            One
-          </Link>
-          <Link to="/two" className="text-gray-200 font-medium hover:text-white transition-colors">
-            Two
-          </Link>
-          <Link to="/three" className="text-gray-200 font-medium hover:text-white transition-colors">
-            Three
-          </Link>
+          <a href="#projects" className="text-gray-200 font-medium hover:text-white transition-colors">
+            Projects
+          </a>
+          <a href="#skills" className="text-gray-200 font-medium hover:text-white transition-colors">
+            Skills
+          </a>
+          <a href="#contact" className="text-gray-200 font-medium hover:text-white transition-colors">
+            Contact
+          </a>
         </div>
       </nav>
 
@@ -57,68 +63,47 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <section className="mb-16">
+        <section id="projects" className="scroll-mt-20 mb-16">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link to="/games" className="no-underline">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-2 text-gray-800">🎮 Games</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  A collection of classic games including puzzles, arcade games, and board games like Checkers with online multiplayer support.
-                </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map(project => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                onClick={setActiveProject}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section id="skills" className="scroll-mt-20 mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">Skills</h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {skills.map(skill => (
+              <div
+                key={skill.name}
+                className="bg-white rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col items-center justify-center p-4"
+              >
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="w-12 h-12 mb-3"
+                />
+                <span className="text-gray-700 font-medium text-sm text-center">
+                  {skill.name}
+                </span>
               </div>
-            </Link>
-
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-2 text-gray-800">Project 2</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-2 text-gray-800">Project 3</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
-              </p>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* Expertise */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">Expertise</h2>
-          <div className="flex flex-wrap gap-4">
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-gray-700 font-medium flex items-center gap-2">
-              <span className="text-xl">⚛️</span>
-              React
-            </span>
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-gray-700 font-medium flex items-center gap-2">
-              <span className="text-xl">🟢</span>
-              Node.js
-            </span>
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-gray-700 font-medium flex items-center gap-2">
-              <span className="text-xl">📜</span>
-              JavaScript
-            </span>
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-gray-700 font-medium flex items-center gap-2">
-              <span className="text-xl">🔷</span>
-              TypeScript
-            </span>
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-gray-700 font-medium flex items-center gap-2">
-              <span className="text-xl">🎨</span>
-              CSS
-            </span>
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-gray-700 font-medium flex items-center gap-2">
-              <span className="text-xl">🌐</span>
-              HTML
-            </span>
-          </div>
-        </section>
 
         {/* Contact */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">Let's Connect</h2>
+        <section id="contact" className="scroll-mt-20 mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact</h2>
           <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
             {/* Email - Spans 2 rows on the left */}
             <a 
@@ -166,6 +151,14 @@ export default function Home() {
       <footer className="text-center py-8 text-gray-600 border-t border-gray-200 mt-12 relative z-10">
         <p>© 2025 Farhan</p>
       </footer>
+
+      {activeProject && (
+        <ProjectModal
+          project={activeProject}
+          onClose={() => setActiveProject(null)}
+        />
+      )}
+
       <ScribbleCat />
     </div>
   );

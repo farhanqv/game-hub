@@ -12,27 +12,36 @@ function Puzzles() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-2xl font-bold mb-2">Sudoku</h3>
-            <p className="text-gray-400 mb-4">Classic number puzzle game</p>
-            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded">
-              Coming Soon
-            </button>
-          </div>
+          {/* Sudoku - NOW ACTIVE! */}
+          <Link to="/sudoku">
+            <div className="bg-gradient-to-br from-purple-900 to-purple-700 rounded-lg p-6 hover:from-purple-800 hover:to-purple-600 transition h-full">
+              <div className="text-5xl mb-4">🔢</div>
+              <h3 className="text-2xl font-bold mb-2">Sudoku</h3>
+              <p className="text-purple-200 mb-4">Classic number puzzle game</p>
+              <div className="bg-purple-600 hover:bg-purple-500 px-6 py-2 rounded inline-block font-semibold">
+                Play Now
+              </div>
+            </div>
+          </Link>
 
-          <div className="bg-gray-800 rounded-lg p-6">
+          {/* Minesweeper - Coming Soon */}
+          <div className="bg-gray-800 rounded-lg p-6 opacity-75">
+            <div className="text-5xl mb-4">💣</div>
             <h3 className="text-2xl font-bold mb-2">Minesweeper</h3>
             <p className="text-gray-400 mb-4">Clear the minefield</p>
-            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded">
+            <button 
+              disabled 
+              className="bg-gray-600 text-gray-400 px-6 py-2 rounded cursor-not-allowed"
+            >
               Coming Soon
             </button>
           </div>
         </div>
 
         <div className="text-center mt-12">
-            <Link to="/" className="text-blue-400 hover:text-blue-300">
-                ← Back to Home
-            </Link>
+          <Link to="/games" className="text-blue-400 hover:text-blue-300">
+            ← Back to Games
+          </Link>
         </div>
       </div>
     </div>

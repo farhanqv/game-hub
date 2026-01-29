@@ -7,6 +7,7 @@ import Arcade from './pages/Arcade'
 import BoardGames from './pages/BoardGames'
 import TestRoom from './pages/TestRoom'
 import Checkers from './pages/Checkers'
+import Sudoku from './pages/Sudoku'
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/board-games" element={<BoardGames />} />
         <Route path="/test-room" element={<TestRoom />} />
         <Route path="/checkers" element={<Checkers />} />
+        <Route path="/sudoku" element={<Sudoku />} />
       </Routes>
     </Router>
   )

@@ -38,8 +38,8 @@ function Arcade() {
         </div>
 
         <div className="text-center mt-12">
-            <Link to="/" className="text-blue-400 hover:text-blue-300">
-                ← Back to Home
+            <Link to="/games" className="text-blue-400 hover:text-blue-300">
+                ← Back to Games
             </Link>
         </div>
       </div>
