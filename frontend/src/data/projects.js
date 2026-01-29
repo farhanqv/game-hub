@@ -10,13 +10,14 @@ const projects = [
     url: "/games",
 },
 {
-    id: "project-2",
-    title: "Project 2",
-    image: "https://via.placeholder.com/600x300",
-    tools: ["Next.js", "TypeScript"],
+    id: "wedding-invitation",
+    title: "Wedding Invitation",
+    image: "wedding-invitation.png",
+    tools: ["React", "JavaScript", "Node", "Tailwind"],
+    shortdesc: "A wedding invitation builder that lets users create custom invitations using pre-designed templates",
     description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
-    url: "#",
+"A wedding invitation builder that allows users to create their own personalized wedding invitations using a variety of pre-designed templates. Users can customize text, colors, images, and layout to match their wedding theme. I created this project to learn full-stack web development using React, Node.js, and JavaScript. Building this app helped me practice both front-end UI design and back-end functionality, including template rendering, user input handling, and data storage.",
+    url: "https://wedding-invitation-farhanqv.vercel.app/",
 },
 ];
 
