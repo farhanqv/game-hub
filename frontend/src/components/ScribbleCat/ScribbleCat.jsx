@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ScribbleCanvas from './ScribbleCanvas';
 import { useStrokeEraser } from './useStrokeEraser';
 import CatCharacter from './CatCharacter';
+import initialScribbleData from './scribble-data.json';
 
 // ==================== CONSTANTS ====================
 export const MAX_STROKES = 10;
@@ -13,7 +14,7 @@ export const MAX_STROKES = 10;
  */
 function ScribbleCat() {
   // STATE: Array of all strokes
-  const [strokes, setStrokes] = useState([]);
+  const [strokes, setStrokes] = useState(initialScribbleData);
 
   // FUNCTION: Remove a stroke from the array
   const removeStroke = (strokeId) => {

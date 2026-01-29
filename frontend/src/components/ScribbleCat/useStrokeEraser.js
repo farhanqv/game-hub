@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 // ==================== CONSTANTS ====================
-const ERASE_DELAY = 300;      // Wait 0.5 second before erasing starts (ms)
+const ERASE_DELAY = 300;      // Wait  second before erasing starts (ms)
 const ERASE_SPEED = 2500;       // Erase speed in pixels per second
 const ARM_APPEAR_DURATION = 100;
 
