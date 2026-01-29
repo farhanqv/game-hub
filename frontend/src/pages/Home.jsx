@@ -43,28 +43,33 @@ export default function Home() {
       <main className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 py-12 pt-24 relative z-10">
         
         {/* Greeting */}
-        <section className="mb-12 text-left">
-          <h1 className="text-5xl font-bold mb-2 text-gray-800">
-            Hello, I'm Farhan
-          </h1>
-          <p className="text-2xl text-gray-600">
-            Software Engineer
-          </p>
-        </section>
+<section className="mt-20 mb-20 text-left">
+  <h1 className="text-2xl text-gray mb-2 text-gray-500">
+    Hello, I'm
+  </h1>
+  <h1 className="text-6xl font-bold mb-4 text-gray-800">
+    Muhammad Farhan
+  </h1>
 
-        {/* Introduction */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">About Me</h2>
-          <p className="text-lg leading-relaxed text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </p>
-        </section>
+  <p className="text-3xl font-semibold text-gray-800 mb-8">
+    Software Engineer
+  </p>
+
+  <p className="text-xl text-gray-600 leading-tight">
+    A full-stack generalist.
+    <br />
+    Specializing in React, Node.js, JavaScript.
+    <br />
+    Always improving and learning new tools.
+  </p>
+</section>
+
+
 
         {/* Projects */}
-        <section id="projects" className="scroll-mt-20 mb-16">
+        <section id="projects" className="scroll-mt-20 mb-20">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Projects</h2>
+<div className="h-px bg-gray-200 my-6"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map(project => (
@@ -78,8 +83,9 @@ export default function Home() {
         </section>
 
         {/* Skills */}
-        <section id="skills" className="scroll-mt-20 mb-16">
+        <section id="skills" className="scroll-mt-20 mb-20">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Skills</h2>
+<div className="h-px bg-gray-200 my-6"></div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {skills.map(skill => (
@@ -102,8 +108,10 @@ export default function Home() {
 
 
         {/* Contact */}
-        <section id="contact" className="scroll-mt-20 mb-16">
+        <section id="contact" className="scroll-mt-20 mb-20">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact</h2>
+         <div className="h-px bg-gray-200 my-6"></div>
+ 
           <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
             {/* Email - Spans 2 rows on the left */}
             <a 
